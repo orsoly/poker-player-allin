@@ -41,7 +41,7 @@ public class Hand
         for (Card card : deck) {
             for (Card anotherCard : deck) {
                 if ( card.equals(anotherCard) ) { continue; }
-                if ( (card.getValue()).equals(anotherCard.getValue()) {
+                if ( (card.getValue()).equals(anotherCard.getValue()) ) {
                     return true;
                 }
             }
