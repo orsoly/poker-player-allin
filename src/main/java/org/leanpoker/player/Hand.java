@@ -104,8 +104,11 @@ public class Hand
         }
 
         Collections.sort(values);
-        for ( int i = 0; i < deck.size(); ++i ) {
-            
+        if ( deck.size() < 5 ) { return false; }
+        for ( int i = 0; i < deck.size() - 5; ++i ) {
+            if ( (deck.get(i).getValue()) == (deck.get(i + 1).getValue() - 1) == (deck.get(i + 2).getValue() - 2) == (deck.get(i + 3).getValue() - 3) == (deck.get(i + 4).getValue() - 4) ) {
+                return true;
+            }
         }
 
         return false;
