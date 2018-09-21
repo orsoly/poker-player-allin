@@ -91,6 +91,8 @@ public class Hand
                         return true;
                     }
                 }
+            }
+        }
         return false;
     }
 

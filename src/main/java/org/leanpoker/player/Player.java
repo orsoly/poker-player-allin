@@ -9,18 +9,23 @@ public class Player {
     static final String VERSION = "Original Roulette Banking Victorious Clan";
 
     public static int betRequest(JsonElement request) {
-        Hand hand = new Hand();
-        getCard(request, hand);
-        if (hand.flush() || hand.fullHouse() || hand.fourOfAKind() || hand.straightFlush() || hand.royalStraightFlush()) {
-            return 10000;
+        try {
+            Hand hand = new Hand();
+            getCard(request, hand);
+            if (hand.flush() || hand.fullHouse() || hand.fourOfAKind() || hand.straightFlush() || hand.royalStraightFlush()) {
+                return 10000;
+            }
+            if (hand.pair() || hand.twoPair() || hand.threeOfKind() || hand.straight()) {
+                return 3827;
+            }
+            if (hand.highestCard().ordinal() >= CardValue.N10.ordinal()) {
+                return 1000;
+            }
         }
-        if (hand.pair() || hand.twoPair() || hand.threeOfKind() || hand.straight()) {
-            return 3827;
+        catch (Exception e) {
+            System.out.println(""+e);
         }
-        if (hand.highestCard().ordinal() >= CardValue.N10.ordinal()) {
-            return 1000;
-        }
-        return 0;
+        return 10000;
     }
 
     public static void getCard(JsonElement request, Hand hand) {
