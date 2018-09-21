@@ -11,6 +11,9 @@ public class Player {
     public static int betRequest(JsonElement request) {
         Hand hand = new Hand();
         getCard(request, hand);
+        if (hand.highestCard() < CardValue.N10) {
+            return 0;
+        }
         return 10000;
     }
 
