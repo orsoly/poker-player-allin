@@ -1,21 +1,11 @@
-package org.leanpoker.card;
+package org.leanpoker.player;
 
 import com.google.gson.JsonElement;
 
 import java.util.Map;
 
 
-enum CardColor
-{
-    CLUB, DIAMIOND, HEART, SPADE
-}
-
-enum CardValue
-{
-    TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE
-}
-
-public class Card
+public class Card //implements Comparable<Card>
 {
     private CardColor col;
     private CardValue val;

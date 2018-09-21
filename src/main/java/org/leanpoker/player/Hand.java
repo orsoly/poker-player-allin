@@ -1,4 +1,4 @@
-package org.leanpoker.card;
+package org.leanpoker.player;
 
 import com.google.gson.JsonElement;
 
@@ -16,5 +16,9 @@ public class Hand
     public Hand(ArrayList<Card> deck)
     {
         this.deck = new ArrayList<Card>(deck);
+    }
+    public add(Card card)
+    {
+        this.deck.add(card);
     }
 }
