@@ -18,9 +18,9 @@ public class Player {
             if (hand.pair() || hand.twoPair() || hand.threeOfKind() || hand.straight()) {
                 return 3827;
             }
-            if (hand.highestCard().ordinal() >= CardValue.N10.ordinal()) {
-                return 1000;
-            }
+//            if (hand.highestCard().ordinal() >= CardValue.N10.ordinal()) {
+//                return 1000;
+//            }
         }
         catch (Exception e) {
             System.out.println("Itt a hiba :'(    "+e);
