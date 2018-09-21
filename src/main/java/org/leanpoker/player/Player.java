@@ -22,8 +22,8 @@ public class Player {
             putIntoHand(hand, card);
         }
         for (int i=0; i<request.getAsJsonObject().getAsJsonArray("community_cards").size(); i++) {
-            request.getAsJsonObject().getAsJsonArray("community_cards").get(i).getAsJsonObject().get("rank").getAsString();
-            request.getAsJsonObject().getAsJsonArray("community_cards").get(i).getAsJsonObject().get("suit").getAsString();
+            String rank = request.getAsJsonObject().getAsJsonArray("community_cards").get(i).getAsJsonObject().get("rank").getAsString();
+            String suit = request.getAsJsonObject().getAsJsonArray("community_cards").get(i).getAsJsonObject().get("suit").getAsString();
             Card card = new Card(rank, suit);
             putIntoHand(hand, card);
         }
