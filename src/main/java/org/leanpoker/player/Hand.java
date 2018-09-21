@@ -23,18 +23,18 @@ public class Hand
     }
 
     public CardValue highestCard() {
-        CardValue highest = null;
+        Card highest = null;
         
         for ( Card card : deck ) {
             if ( highest == null ) {
-                highest = card.getValue();
+                highest = card;
             }
             else if ( card.compareTo(highest) > 0 ) {
-                highest = card.getValue();
+                highest = card;
             }
         }
 
-        return highest;
+        return highest.getValue();
     }
 
     public boolean pair() {
