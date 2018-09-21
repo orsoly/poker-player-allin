@@ -4,6 +4,7 @@ import com.google.gson.JsonElement;
 
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Hand
 {
@@ -96,34 +97,44 @@ public class Hand
     }
 
     public boolean straight() {
+        ArrayList<Integer> values = new ArrayList<>();
+        
+        for ( int i = 0; i < deck.size(); ++i ) {
+            values.add(deck.get(i).getValue());
+        }
 
-        return true;
+        Collections.sort(values);
+        for ( int i = 0; i < deck.size(); ++i ) {
+            
+        }
+
+        return false;
     }
 
     public boolean flush() {
 
-        return true;
+        return false;
     }
 
     public boolean fullHouse() {
 
-        return true;
+        return false;
     }
 
     public boolean fourOfAKind() {
 
 
-        return true;
+        return false;
     }
 
     public boolean straightFlush() {
 
 
-        return true;
+        return false;
     }
 
     public boolean royalStraightFlush() {
 
-        return true;
+        return false;
     }
 }
