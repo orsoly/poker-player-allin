@@ -89,7 +89,7 @@ public class Card implements Comparable<Card>
         this.val = val;
     }
     
-    public static void isNext(Card prev, Card next) {
+    public static boolean isNext(Card prev, Card next) {
         return ( prev.val == CardValue.N2 && next.val == CardValue.N3 ) ||
         ( prev.val == CardValue.N3 && next.val == CardValue.N4 ) ||
         ( prev.val == CardValue.N4 && next.val == CardValue.N5 ) ||
