@@ -82,8 +82,15 @@ public class Hand
     }
 
     public boolean threeOfKind() {
-
-        return true;
+        for (Card firstCard : deck) {
+            for (Card secondCard : deck) {
+                for (Card thirdCard : deck) {
+                    if ( firstCard.equals(secondCard) || secondCard.equals(thirdCard) || firstCard.equals(thirdCard) ) { continue; }
+                    if ( (firstCard.getValue()).equals(secondCard.getValue()) && (secondCard.getValue()).equals(thirdCard.getValue()) ) {
+                        return true;
+                    }
+                }
+        return false;
     }
 
     public boolean straight() {
