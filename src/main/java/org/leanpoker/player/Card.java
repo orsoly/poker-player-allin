@@ -88,6 +88,21 @@ public class Card implements Comparable<Card>
     {
         this.val = val;
     }
+    
+    public static void isNext(Card prev, Card next) {
+        return ( prev.val == CardValue.N2 && next.val == CardValue.N3 ) ||
+        ( prev.val == CardValue.N3 && next.val == CardValue.N4 ) ||
+        ( prev.val == CardValue.N4 && next.val == CardValue.N5 ) ||
+        ( prev.val == CardValue.N5 && next.val == CardValue.N6 ) ||
+        ( prev.val == CardValue.N6 && next.val == CardValue.N7 ) ||
+        ( prev.val == CardValue.N7 && next.val == CardValue.N8 ) ||
+        ( prev.val == CardValue.N8 && next.val == CardValue.N9 ) ||
+        ( prev.val == CardValue.N9 && next.val == CardValue.N10 ) ||
+        ( prev.val == CardValue.N10 && next.val == CardValue.J ) ||
+        ( prev.val == CardValue.J && next.val == CardValue.Q ) ||
+        ( prev.val == CardValue.Q && next.val == CardValue.K ) ||
+        ( prev.val == CardValue.K && next.val == CardValue.A );
+    }
 
     @Override
     public int compareTo(Card other)

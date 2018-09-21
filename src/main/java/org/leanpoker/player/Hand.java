@@ -97,7 +97,7 @@ public class Hand
     }
 
     public boolean straight() {
-/*        ArrayList<> values = new ArrayList<>();
+        ArrayList<> values = new ArrayList<>();
         
         for ( int i = 0; i < deck.size(); ++i ) {
             values.add(deck.get(i).getValue());
@@ -106,11 +106,12 @@ public class Hand
         Collections.sort(values);
         if ( deck.size() < 5 ) { return false; }
         for ( int i = 0; i < deck.size() - 5; ++i ) {
-            if ( (deck.get(i).getValue()) == (deck.get(i + 1).getValue() - 1) == (deck.get(i + 2).getValue() - 2) == (deck.get(i + 3).getValue() - 3) == (deck.get(i + 4).getValue() - 4) ) {
+            if ( Card.isNext(deck.get(i), deck.get(i + 1)) && Card.isNext(deck.get(i + 1), deck.get(i + 2)) && Card.isNext(deck.get(i + 2) && deck.get(i + 3)) &&
+                 Card.isNext(deck.get(i + 3), deck.get(i + 4) ) {
                 return true;
             }
         }
-*/
+
         return false;
     }
 
