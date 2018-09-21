@@ -99,5 +99,20 @@ public class Card implements Comparable<Card>
     {
         return "" + this.col.toString() + this.val.toString();
     }
+
+    @Override
+    public boolean equals(Object other)
+    {
+        if(other == null)
+            return false;
+        if(other == this)
+            return true;
+        if(other instanceof Card)
+        {
+            Card temp = (Card)other;
+            return this.col == temp.col && this.val == temp.val;
+        }
+        else return false;
+    }
 }
 
