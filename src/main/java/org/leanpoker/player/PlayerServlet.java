@@ -33,7 +33,7 @@ public class PlayerServlet extends HttpServlet {
             resp.getWriter().print(Player.VERSION);
         }
         if (req.getParameter("action").equals("check")) {
-            resp.setStatus(HttpServletResponse.OK);
+            resp.setStatus(HttpServletResponse.SC_OK);
         }
 
     }
