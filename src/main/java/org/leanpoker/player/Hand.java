@@ -50,9 +50,35 @@ public class Hand
         return false;
     }
 
-    public boolean twoPair() {
+    private boolean hasPairAndRemove(ArrayList<Card> deck) {
+        for (Card card : deck) {
+            for (Card anotherCard : deck) {
+                if ( card.equals(anotherCard) ) { continue; }
+                if ( (card.getValue()).equals(anotherCard.getValue()) ) {
+                    deck.remove(card);
+                    deck.remove(anotherCard);
+                    return true;
+                }
+            }
+        }
 
-        return true;
+        return false;
+
+    }
+
+
+    public boolean twoPair() {
+        ArrayList<Card> localDeck = new ArrayList<>();
+        for (Card card : deck) {
+            localDeck.add(card);
+        }
+        
+        boolean hasOnePair = hasPairAndRemove(localDeck);        
+        if ( hasOnePair ) {
+            return hasPairAndRemove(localDeck);
+        }
+
+        return false;
     }
 
     public boolean threeOfKind() {
