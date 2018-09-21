@@ -97,7 +97,7 @@ public class Hand
     }
 
     public boolean straight() {
-        ArrayList<Integer> values = new ArrayList<>();
+/*        ArrayList<> values = new ArrayList<>();
         
         for ( int i = 0; i < deck.size(); ++i ) {
             values.add(deck.get(i).getValue());
@@ -110,7 +110,7 @@ public class Hand
                 return true;
             }
         }
-
+*/
         return false;
     }
 
