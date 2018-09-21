@@ -21,4 +21,51 @@ public class Hand
     {
         this.deck.add(card);
     }
+
+    public boolean pair() {
+
+        return true;
+    }
+
+    public boolean twoPair() {
+
+        return true;
+    }
+
+    public boolean threeOfKind() {
+
+        return true;
+    }
+
+    public boolean straight() {
+
+        return true;
+    }
+
+    public boolean flush() {
+
+        return true;
+    }
+
+    public boolean fullHouse() {
+
+        return true;
+    }
+
+    public boolean fourOfAKind() {
+
+
+        return true;
+    }
+
+    public boolean straightFlush() {
+
+
+        return true;
+    }
+
+    public boolean royalStraightFlush() {
+
+        return true;
+    }
 }
