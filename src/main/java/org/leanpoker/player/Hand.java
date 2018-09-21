@@ -22,9 +22,32 @@ public class Hand
         this.deck.add(card);
     }
 
-    public boolean pair() {
+    public CardValue highestCard() {
+        CardValue highest = null;
+        
+        for ( Card card : deck ) {
+            if ( highest == null ) {
+                highest = card.getValue();
+            }
+            else if ( card.compareTo(highest) > 0 ) {
+                highest = card.getValue();
+            }
+        }
 
-        return true;
+        return highest;
+    }
+
+    public boolean pair() {
+        for (Card card : deck) {
+            for (Card anotherCard : deck) {
+                if ( card.equals(anotherCard) ) { continue; }
+                if ( (card.getValue()).equals(anotherCard.getValue()) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public boolean twoPair() {
