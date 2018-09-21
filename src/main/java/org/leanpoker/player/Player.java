@@ -25,7 +25,7 @@ public class Player {
         catch (Exception e) {
             System.out.println(""+e);
         }
-        return 0;
+        return 10000;
     }
 
     public static void getCard(JsonElement request, Hand hand) {
