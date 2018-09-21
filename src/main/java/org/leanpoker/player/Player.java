@@ -23,7 +23,7 @@ public class Player {
             }
         }
         catch (Exception e) {
-            System.out.println(""+e);
+            System.out.println("Itt a hiba :'(    "+e);
         }
         return 10000;
     }
