@@ -7,6 +7,6 @@ import java.util.Map;
 
 public enum CardColor
 {
-    CLUB, DIAMIOND, HEART, SPADE
+    CLUB, DIAMOND, HEART, SPADE
 }
 
