@@ -16,14 +16,14 @@ public class Player {
 
     public static void getCard(JsonElement request, Hand hand) {
         for(int i=0; i<2; i++) {
-            String rank = request.getAsJsonObject().getAsJsonArray("players").get(1).getAsJsonObject().getAsJsonArray("hole_cards").get(i).get("rank").getAsString();
-            String suit = request.getAsJsonObject().getAsJsonArray("players").get(1).getAsJsonObject().getAsJsonArray("hole_cards").get(i).get("suit").getAsString();
+            String rank = request.getAsJsonObject().getAsJsonArray("players").get(1).getAsJsonObject().getAsJsonArray("hole_cards").get(i).getAsJsonObject().get("rank").getAsString();
+            String suit = request.getAsJsonObject().getAsJsonArray("players").get(1).getAsJsonObject().getAsJsonArray("hole_cards").get(i).getAsJsonObject().get("suit").getAsString();
             Card card = new Card(rank, suit);
             putIntoHand(hand, card);
         }
-        for (int i=0; i<request.getAsJsonObject().getAsJsonArray("community_cards").length(); i++) {
-            request.getAsJsonObject().getAsJsonArray("community_cards").get(i).get("rank").getAsString();
-            request.getAsJsonObject().getAsJsonArray("community_cards").get(i).get("suit").getAsString();
+        for (int i=0; i<request.getAsJsonObject().getAsJsonArray("community_cards").size(); i++) {
+            request.getAsJsonObject().getAsJsonArray("community_cards").get(i).getAsJsonObject().get("rank").getAsString();
+            request.getAsJsonObject().getAsJsonArray("community_cards").get(i).getAsJsonObject().get("suit").getAsString();
             Card card = new Card(rank, suit);
             putIntoHand(hand, card);
         }
