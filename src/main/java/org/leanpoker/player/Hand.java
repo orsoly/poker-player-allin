@@ -17,7 +17,7 @@ public class Hand
     {
         this.deck = new ArrayList<Card>(deck);
     }
-    public add(Card card)
+    public void add(Card card)
     {
         this.deck.add(card);
     }

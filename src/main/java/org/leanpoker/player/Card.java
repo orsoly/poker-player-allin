@@ -15,26 +15,76 @@ public class Card implements Comparable<Card>
         this.col = col;
         this.val = val;
     }
-    /*public Card(String rank, String suit)
+    public Card(String rank, String suit)
     {
         if(rank.equals("J"))
         {
-            this.col = 
+            this.val = CardValue.J;
         }
-    }*/
-    CardColor getColor()
+        else if(rank.equals("Q"))
+        {
+            this.val = CardValue.Q;
+        }
+        else if(rank.equals("K"))
+        {
+            this.val = CardValue.K;
+        }
+        else if(rank.equals("A"))
+        {
+            this.val = CardValue.A;
+        }
+        else if(rank.equals("2"))
+        {
+            this.val = CardValue.N2;
+        }
+        else if(rank.equals("3"))
+        {
+            this.val = CardValue.N3;
+        }
+        else if(rank.equals("4"))
+        {
+            this.val = CardValue.N4;
+        }
+        else if(rank.equals("5"))
+        {
+            this.val = CardValue.N5;
+        }
+        else if(rank.equals("6"))
+        {
+            this.val = CardValue.N6;
+        }
+        else if(rank.equals("7"))
+        {
+            this.val = CardValue.N7;
+        }
+        else if(rank.equals("8"))
+        {
+            this.val = CardValue.N8;
+        }
+        else if(rank.equals("9"))
+        {
+            this.val = CardValue.N9;
+        }
+        else
+        {
+            this.val = CardValue.N10;
+        }
+
+        this.col = CardColor.valueOf(suit);
+    }
+    public CardColor getColor()
     {
         return this.col;
     }
-    CardValue getValue()
+    public CardValue getValue()
     {
         return this.val;
     }
-    void setColor(CardColor col)
+    public void setColor(CardColor col)
     {
         this.col = col;
     }
-    void setValue(CardValue val)
+    public void setValue(CardValue val)
     {
         this.val = val;
     }
@@ -43,6 +93,11 @@ public class Card implements Comparable<Card>
     public int compareTo(Card other)
     {
         return Integer.compare(this.val.ordinal(), other.val.ordinal());
+    }
+
+    public String toString()
+    {
+        return "" + this.col.toString() + this.val.toString();
     }
 }
 
