@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 import java.util.Map;
 
 
-public class Card //implements Comparable<Card>
+public class Card implements Comparable<Card>
 {
     private CardColor col;
     private CardValue val;
@@ -15,6 +15,13 @@ public class Card //implements Comparable<Card>
         this.col = col;
         this.val = val;
     }
+    /*public Card(String rank, String suit)
+    {
+        if(rank.equals("J"))
+        {
+            this.col = 
+        }
+    }*/
     CardColor getColor()
     {
         return this.col;
@@ -30,6 +37,12 @@ public class Card //implements Comparable<Card>
     void setValue(CardValue val)
     {
         this.val = val;
+    }
+
+    @Override
+    public int compareTo(Card other)
+    {
+        return Integer.compare(this.val.ordinal(), other.val.ordinal());
     }
 }
 
