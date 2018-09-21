@@ -22,7 +22,9 @@ public class Player {
                 return 1000;
             }
         }
-        catch (Exception e) {}
+        catch (Exception e) {
+            System.out.println(""+e);
+        }
         return 0;
     }
 
