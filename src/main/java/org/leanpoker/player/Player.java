@@ -10,7 +10,7 @@ public class Player {
 
     public static int betRequest(JsonElement request) {
         Hand hand = new Hand();
-        getCard(request, hand);
+//        getCard(request, hand);
         if (hand.flush() || hand.fullHouse() || hand.fourOfAKind() || hand.straightFlush() || hand.royalStraightFlush()) {
             return 10000;
         }
